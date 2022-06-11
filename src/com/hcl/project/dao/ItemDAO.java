@@ -4,10 +4,13 @@
  */
 package com.hcl.project.dao;
 
+import com.hcl.project.model.Item;
+import java.util.List;
+
 /**
  *
  * @author PC
  */
 public interface ItemDAO {
-    
+    List<Item> getAllItems();
 }

@@ -6,6 +6,8 @@ import com.hcl.project.service.UserService;
 import javax.swing.JOptionPane;
 
 public class Register extends javax.swing.JFrame {
+    
+    private UserService userService = UserService.getInstance();
 
     /**
      * Creates new form Register
@@ -24,6 +26,7 @@ public class Register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator1 = new javax.swing.JSeparator();
         titlePanel = new javax.swing.JPanel();
         titleLabel = new javax.swing.JLabel();
         inputPanel = new javax.swing.JPanel();
@@ -136,8 +139,6 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        registerBtn.getAccessibleContext().setAccessibleName("Register");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -196,14 +197,13 @@ public class Register extends javax.swing.JFrame {
         confirmField.setText("");
     }//GEN-LAST:event_clearBtnActionPerformed
 
-    private UserService userService = UserService.getInstance();
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton clearBtn;
     private javax.swing.JPasswordField confirmField;
     private javax.swing.JLabel confirmLabel;
     private javax.swing.JPanel inputPanel;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JButton registerBtn;

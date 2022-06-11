@@ -1,5 +1,6 @@
 package com.hcl.project.view;
 
+import com.hcl.project.view.customer.Home;
 import javax.swing.JFrame;
 
 public class App extends javax.swing.JFrame {
@@ -125,6 +126,7 @@ public class App extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
+        new Home();
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
@@ -132,7 +134,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_registerBtnActionPerformed
 
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
-        
+        dispose();
     }//GEN-LAST:event_exitBtnActionPerformed
 
     /**
