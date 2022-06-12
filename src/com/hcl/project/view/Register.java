@@ -6,7 +6,7 @@ import com.hcl.project.service.UserService;
 import javax.swing.JOptionPane;
 
 public class Register extends javax.swing.JFrame {
-    
+
     private UserService userService = UserService.getInstance();
 
     /**
@@ -40,6 +40,8 @@ public class Register extends javax.swing.JFrame {
         registerBtn = new javax.swing.JButton();
         clearBtn = new javax.swing.JButton();
 
+        setTitle("Registration");
+        setAlwaysOnTop(true);
         setResizable(false);
 
         titleLabel.setFont(new java.awt.Font("Lucida Console", 1, 24)); // NOI18N
@@ -188,6 +190,9 @@ public class Register extends javax.swing.JFrame {
             }
         } catch (DuplicateElementException e) {
             JOptionPane.showMessageDialog(this, "Username already existed");
+            usernameField.setText("");
+            passwordField.setText("");
+            confirmField.setText("");
         }
     }//GEN-LAST:event_registerBtnActionPerformed
 

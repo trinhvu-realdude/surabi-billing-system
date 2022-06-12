@@ -5,11 +5,20 @@ import javax.swing.JFrame;
 
 public class App extends javax.swing.JFrame {
 
+    private static class AppInstance {
+
+        private static final App INSTANCE = new App();
+    }
+
     /**
      * Creates new form App
      */
-    public App() {
+    private App() {
         initComponents();
+    }
+
+    public static App getInstance() {
+        return AppInstance.INSTANCE;
     }
 
     /**
@@ -125,8 +134,7 @@ public class App extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        // TODO add your handling code here:
-        new Home();
+        new Login();
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
@@ -167,7 +175,7 @@ public class App extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new App().setVisible(true);
+                App.getInstance().setVisible(true);
             }
         });
     }
